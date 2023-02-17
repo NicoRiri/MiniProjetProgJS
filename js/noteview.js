@@ -3,15 +3,11 @@ class Noteview{
         this.note = note;
     }
     conversion(){
-        // let markdownText = `# ${this.note.titre}
-        // ### ${this.note.date_creation.toLocaleDateString()}
-        // ${this.note.contenu}`
         let conv = new showdown.Converter();
         let titre = conv.makeHtml("# "+this.note.titre)
         let date = conv.makeHtml("### "+this.note.date_creation.toLocaleString())
         let contenu = conv.makeHtml(this.note.contenu);
-        let htmlText = titre+date+contenu
-        return htmlText;
+        return titre + date + contenu;
     }
     afficher(html){
         let spot = document.querySelector("#currentNoteView")

@@ -29,7 +29,7 @@ spot.addEventListener("click", function (e) {
     let i = 0;
     for (const child of e.currentTarget.children) {
         child.classList.remove("note_list_item-selected")
-        if (child == e.target) {
+        if (child === e.target) {
             child.classList.add("note_list_item-selected")
             console.log("ok");
             console.log(i);
