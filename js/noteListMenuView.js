@@ -11,6 +11,9 @@ const noteListMenuView = {
     displayItem: function(note) {
         let element = document.querySelector("#noteListMenu");
         let div = document.createElement("div");
+        for (let i = 0; i < element.children.length; i++) {
+            element.children.item(i).classList.remove("note_list_item-selected")
+        }
         div.classList.add("note_list_item");
         div.classList.add("note_list_item-selected");
         let textNode = document.createTextNode(note.titre + " " + note.date_creation.toLocaleDateString());
