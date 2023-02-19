@@ -42,8 +42,10 @@ let spot = document.querySelector("#noteListMenu");
 spot.addEventListener("click", function (e) {
     let i = 0;
     for (const child of e.currentTarget.children) {
-        child.classList.remove("note_list_item-selected")
         if (child === e.target) {
+            for (const child of e.currentTarget.children) {
+                child.classList.remove("note_list_item-selected")
+            }
             child.classList.add("note_list_item-selected")
             application.indexNoteCourante = i;
             let nv = new Noteview(application.noteList.getNoteById(i));
