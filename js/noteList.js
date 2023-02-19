@@ -7,10 +7,12 @@ class NoteList {
     addNote(note) {
         let id = this.tab.push(note);
         this.save();
-        return id - 1;
+        return id;
     }
 
     getNoteById(id) {
+        console.log(id)
+        console.log(this.tab[id])
         return this.tab[id];
     }
 
@@ -31,5 +33,16 @@ class NoteList {
             }
             noteListMenuView.initList(this.tab);
         }
+    }
+
+    delete(){
+        this.tab.splice(application.indexNoteCourante, 1)
+        this.save()
+    }
+
+    edit(indice, titre, contenu){
+        this.tab[indice].setTitre(titre)
+        this.tab[indice].setContenu(contenu)
+        this.save()
     }
 }

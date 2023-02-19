@@ -23,6 +23,19 @@ const noteListMenuView = {
             noteView.afficher(noteView.conversion())
         });
         element.appendChild(div);
+    },
+
+    deleteInList : function () {
+        let element = document.querySelector("#noteListMenu");
+        application.noteList.delete()
+        element.children.item(application.indexNoteCourante).remove()
+    },
+
+    modifInList : function () {
+        let element = document.querySelector("#noteListMenu");
+        let note = application.noteList.getNoteById(application.indexNoteCourante)
+        console.log(element.children.item(application.indexNoteCourante).textContent)
+        element.children.item(application.indexNoteCourante).textContent = (note.titre + " " + note.date_creation.toLocaleDateString())
     }
 };
 
