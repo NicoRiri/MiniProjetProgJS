@@ -1,7 +1,8 @@
 # MiniProjetProgJS
 
 ## Auteurs
-Bernardet Nicolas et Pellizzari Théo en S4ADWM2
+- Bernardet Nicolas S4ADWM2
+- Pellizzari Théo S4ADWM2
 
 ## Fonctionnalités réalisées
 - Créer une note et l'afficher ✅
