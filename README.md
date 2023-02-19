@@ -1,7 +1,19 @@
-# MiniProjetWeb
+# MiniProjetProgJS
 
-Bernardet Nicolas et Pellizzari Théo
+## Auteurs
+Bernardet Nicolas et Pellizzari Théo en S4ADWM2
 
+## Fonctionnalités réalisées
+- Créer une note et l'afficher ✅
+- Gérer une liste de notes ✅
+- une liste de notes persistante ✅
+- supprimer des notes dans la liste ✅
+- modifier des notes existantes ✅
+
+## Lancement
+Juste lancer index.html
+
+## Objectif
 L'objectif de ce mini-projet est de construire une application javascript vous permettant d'utiliser et
 d'appliquer les notions abordées jusqu'ici : bases du langage, fonctions, objets et tableaux, DOM et
 événements.
