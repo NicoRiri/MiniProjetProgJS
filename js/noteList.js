@@ -11,8 +11,6 @@ class NoteList {
     }
 
     getNoteById(id) {
-        console.log(id)
-        console.log(this.tab[id])
         return this.tab[id];
     }
 

@@ -10,7 +10,6 @@ const NoteFormView = {
         let titre = document.querySelector("#form_add_note_title").value;
         let contenu = document.querySelector("#form_add_note_text").value;
         let note = new Note(titre, contenu);
-        application.noteCourante = application.noteList.addNote(note);
         noteListMenuView.displayItem(note)
         let noteView = new Noteview(note);
         noteView.afficher(noteView.conversion());
@@ -19,9 +18,8 @@ const NoteFormView = {
 
     displayedit(){
         document.querySelector("#noteForm").classList.remove("create_edit_note-hidden")
-        console.log(application.noteList.getNoteById(application.indexNoteCourante).titre)
         document.querySelector("#form_add_note_title").value = application.noteList.getNoteById(application.indexNoteCourante).titre
-        document.querySelector("#form_add_note_text").value = application.noteCourante.contenu
+        document.querySelector("#form_add_note_text").value = application.noteList.getNoteById(application.indexNoteCourante).contenu
         document.querySelector("#form_add_note_valid").addEventListener("click", this.validateedit)
     },
 

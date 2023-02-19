@@ -1,5 +1,4 @@
 const application = {
-    noteCourante : null,
     noteList : new NoteList(),
     indexNoteCourante: null,
     init(){

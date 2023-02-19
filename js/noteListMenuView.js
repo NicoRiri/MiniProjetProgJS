@@ -34,24 +34,19 @@ const noteListMenuView = {
     modifInList : function () {
         let element = document.querySelector("#noteListMenu");
         let note = application.noteList.getNoteById(application.indexNoteCourante)
-        console.log(element.children.item(application.indexNoteCourante).textContent)
         element.children.item(application.indexNoteCourante).textContent = (note.titre + " " + note.date_creation.toLocaleDateString())
     }
 };
 
 let spot = document.querySelector("#noteListMenu");
 spot.addEventListener("click", function (e) {
-    console.log(e.target);
     let i = 0;
     for (const child of e.currentTarget.children) {
         child.classList.remove("note_list_item-selected")
         if (child === e.target) {
             child.classList.add("note_list_item-selected")
-            console.log("ok");
-            console.log(i);
             application.indexNoteCourante = i;
-            application.noteCourante = application.noteList.getNoteById(i);
-            let nv = new Noteview(application.noteCourante);
+            let nv = new Noteview(application.noteList.getNoteById(i));
             nv.afficher(nv.conversion())
         } else {
             i++;
